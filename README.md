@@ -23,6 +23,7 @@ urllib:
 
  - There's no encryption between your server and this server 
  - Request is transmitted without modification 
+ - Uses only http proxy
 
 ## To do
  - Make a docker container, probably with a tor daemon
