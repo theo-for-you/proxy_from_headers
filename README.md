@@ -1,4 +1,4 @@
-# HTTP to proxy
+# HTTP headers to proxy
 Some http handler without a proxy support -> This server -> Proxy server -> Target 
 
 For example: Nginx -> Tor
