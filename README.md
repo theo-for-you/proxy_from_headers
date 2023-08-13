@@ -27,3 +27,4 @@ urllib:
 
 ## To do
  - Make a docker container, probably with a tor daemon
+ - Filtering some requests
