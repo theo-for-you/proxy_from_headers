@@ -1,19 +1,22 @@
 import requests
 
 proxy = "127.0.0.1:1234"
-server_port = "8001"
+proxy_from_headers = "http://127.0.0.1:8001"
 
-requests.get("http://127.0.0.1:" + server_port, headers={
+r = requests.get(proxy_from_headers, headers={
     "HTTP-Proxy": proxy,
     "Target": "duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion"
 })
+print(r.ok)
 
-requests.get("http://127.0.0.1:" + server_port, headers={
+r = requests.get(proxy_from_headers, headers={
     "HTTP-Proxy": proxy,
     "Target": "api.ipify.org"
 })
+print(r.text, r.ok)
 
-requests.post("http://127.0.0.1:" + server_port + "/post?data=1", data="test1", headers={
+r = requests.post(proxy_from_headers + "/post?data=1", data="test1", headers={
     "HTTP-Proxy": proxy,
     "Target": "postman-echo.com"
 })
+print(r.text, r.ok)
